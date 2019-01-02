@@ -12,6 +12,18 @@ and open the template in the editor.
     </head>
     <body>
        <!-- <?php include('hello.php); ?> // aby skrypt php działał w taki sposób musi być utowrzony w pliku index.php a nie index.html-->
+       
+       <!-- Wystarczy zmienić ustawienia serwera, tak żeby pliki z rozszerzeniem .html były parsowane przez PHP
+            W przypadku serwera Apache: 
+            Należy utworzyć w katalogu głównym domeny plik o nazwie .htaccess, zawierający dyrektywę:
+            
+            AddType application/x-httpd-php .html .htm
+            
+            Jeżeli na serwerze zainstalowane jest PHP w wersji 5, warto dla pewności dodać też:
+            
+            AddType application/x-httpd-php5 .html .htm    
+        -->
+        
         <form  action = "hello.php" method = "POST">
             <input type ="text" name="name" placeholder="Wpisz imię">
             <input type ="submit" value="Wyślij :)">
